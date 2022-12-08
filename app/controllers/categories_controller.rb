@@ -24,6 +24,10 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def filter
+    render json: @category
+  end
+
   # PATCH/PUT /categories/1
   def update
     if @category.update(category_params)

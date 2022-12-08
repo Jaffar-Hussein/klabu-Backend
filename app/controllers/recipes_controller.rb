@@ -24,6 +24,7 @@ class RecipesController < ApplicationController
     end
   end
 
+  
   # PATCH/PUT /recipes/1
   def update
     if @recipe.update(recipe_params)
