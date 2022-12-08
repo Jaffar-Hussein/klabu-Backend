@@ -16,7 +16,13 @@ catt = Category.create({
 cattt = Category.create({
         name: "Dinner"
 })
+user = User.create!(
 
+        username: "Hanan",
+        email: "hanan@gmail.com",
+        password: "1234",
+        password_confirmation: "1234"
+)
 
 recipes = catt.recipes.create([
         {
@@ -33,7 +39,8 @@ recipes = catt.recipes.create([
                 Step 3 Cook veggies in spices and mix with boiled macaroni
                 After sauteing the vegetables, add tomato ketchup to it. Stir well and then add chilli powder, white pepper powder and salt in the wok. Stir once again and cook the veggies for 5-7 minutes. Finally, add boiled macaroni to the wok and cook for another 5 minutes.
                 Step 4 Ready to be served
-                Transfer the prepared macaroni to a plate and garnish with grated cheese (optional). Serve hot. Pair up a beverage of your choice with this scrumptious macaroni recipe to make it a wholesome meal."
+                Transfer the prepared macaroni to a plate and garnish with grated cheese (optional). Serve hot. Pair up a beverage of your choice with this scrumptious macaroni recipe to make it a wholesome meal.",
+                user_id: user.id
                 
         },
         {
@@ -44,14 +51,18 @@ recipes = catt.recipes.create([
                 2 teaspoon powdered black pepper, 2 tablespoon sunflower oil, 3 teaspoon garlic paste, 3 teaspoon garlic paste, 3 eggs, 1 cup grated carrot, 7 sliced green chilli, salt as required, 3 teaspoon ginger paste, 1 teaspoon ajinomoto, 2 tablespoon soy sauce",
                 direction: "To make this easy recipe, begin with par-boiling the noodles. Once done, drain the excess water and keep it aside. In the meantime, heat a pan over a medium flame. Once the oil is sufficiently hot, add the ginger-garlic paste and fry for some time. If you like to make it more delicious, add some finely chopped green chillies. You can also use chillies soaked in vinegar.
                 Then add the onions, beans and green chillies in the same pan and saute for a minute or two. Add the carrots, cabbage, salt, pepper powder, soy sauce and Ajinomoto. Stir-fry the ingredients for some time. Once done, add the boiled noodles and break the eggs into the pan. Mix well and cook for a few minutes. If you like smoky flavours, stir the veggies mix on a high flame.
-                Cover the pan with a lid and allow it to cook for around 2-3 minutes. Once done, transfer the dish to a serving bowl and garnish it with coriander leaves. Serve hot and pair it with a spicy gravy of your choice. Make sure you try this recipe, rate it and let us know how it turned out to be."    
+                Cover the pan with a lid and allow it to cook for around 2-3 minutes. Once done, transfer the dish to a serving bowl and garnish it with coriander leaves. Serve hot and pair it with a spicy gravy of your choice. Make sure you try this recipe, rate it and let us know how it turned out to be.",
+                user_id: user.id
+
         },
         {
                 title: "Crisp Apple Salad",
                 description: "",
                 picture: "https://images.unsplash.com/photo-1505576633757-0ac1084af824?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
                 ingredients: "Crisp tart apple, Mixed greens like butter or Bibb lettuce, frisee, etc, Candied pecans or toasted pecans, Goat cheese or feta cheese crumbles, Pomegranate seeds or dried cranberries, Maple Vinaigrette dressing",
-                direction: "mix the ingredients in a bowl and serve"
+                direction: "mix the ingredients in a bowl and serve",
+                user_id: user.id
+
         }
 
 ])
@@ -63,7 +74,9 @@ rec = cattt.recipes.create([
                 ingredients: "350 gm chicken, 1/2 teaspoon ginger paste, 1/2 teaspoon red chilli powder, 1/4 teaspoon cumin powder, salt as required
                 1/2 cup hung curd, 1/2 teaspoon garlic paste, 1/4 teaspoon coriander powder, 1/4 teaspoon powdered black pepper, 1 teaspoon garam masala powder",
                 direction: "To prepare this easy chicken recipe, wash the chicken pieces and prick them with a fork. Now, in a large bowl, combine hung curd, ginger paste, garlic paste, red chilli powder, coriander powder, cumin powder, black pepper, salt and garam masala. Stir all the ingredients together until well blended.
-                Now add the chicken pieces and apply the masala mixture all over them. Cover and refrigerate for at least 8 hours or up to 24 hours. Once done, preheat the oven at 190 degree Celsius. Remove the chicken pieces from the marinade and place them on a grilling tray. Grill them for 1 hour, flipping them after 30 minutes so that both sides can cook evenly. Check if the chicken has fully cooked by taking one piece out and cutting it with a knife. Serve hot with salad or a dip."
+                Now add the chicken pieces and apply the masala mixture all over them. Cover and refrigerate for at least 8 hours or up to 24 hours. Once done, preheat the oven at 190 degree Celsius. Remove the chicken pieces from the marinade and place them on a grilling tray. Grill them for 1 hour, flipping them after 30 minutes so that both sides can cook evenly. Check if the chicken has fully cooked by taking one piece out and cutting it with a knife. Serve hot with salad or a dip.",
+                user_id: user.id
+
         },
         {
                 title: "Meat Balls",
@@ -71,7 +84,9 @@ rec = cattt.recipes.create([
                 picture: "https://images.unsplash.com/photo-1515516969-d4008cc6241a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
                 ingredients: "ground meat, bread crumbs, 1/2 cup milk, 1 teaspoon salt, black pepper, Parmesan cheese",
                 direction: "Ground meat,  Here, we’re soaking fresh or dried breadcrumbs in a little milk until the bread becomes soggy, then mixing that right into the meat. This binder (aka panade) helps add moisture to the meatballs and also prevents the meat proteins from shrinking and becoming tough.
-                Roasting is the best option if you’re planning on serving the meatballs in something other than a sauce or if you’re planning to freeze the meatballs for later."    
+                Roasting is the best option if you’re planning on serving the meatballs in something other than a sauce or if you’re planning to freeze the meatballs for later."   , 
+                user_id: user.id
+
         },
         {
                 title: "Egg Noodles Recipe",
@@ -81,7 +96,9 @@ rec = cattt.recipes.create([
                 2 teaspoon powdered black pepper, 2 tablespoon sunflower oil, 3 teaspoon garlic paste, 3 teaspoon garlic paste, 3 eggs, 1 cup grated carrot, 7 sliced green chilli, salt as required, 3 teaspoon ginger paste, 1 teaspoon ajinomoto, 2 tablespoon soy sauce",
                 direction: "To make this easy recipe, begin with par-boiling the noodles. Once done, drain the excess water and keep it aside. In the meantime, heat a pan over a medium flame. Once the oil is sufficiently hot, add the ginger-garlic paste and fry for some time. If you like to make it more delicious, add some finely chopped green chillies. You can also use chillies soaked in vinegar.
                 Then add the onions, beans and green chillies in the same pan and saute for a minute or two. Add the carrots, cabbage, salt, pepper powder, soy sauce and Ajinomoto. Stir-fry the ingredients for some time. Once done, add the boiled noodles and break the eggs into the pan. Mix well and cook for a few minutes. If you like smoky flavours, stir the veggies mix on a high flame.
-                Cover the pan with a lid and allow it to cook for around 2-3 minutes. Once done, transfer the dish to a serving bowl and garnish it with coriander leaves. Serve hot and pair it with a spicy gravy of your choice. Make sure you try this recipe, rate it and let us know how it turned out to be."    
+                Cover the pan with a lid and allow it to cook for around 2-3 minutes. Once done, transfer the dish to a serving bowl and garnish it with coriander leaves. Serve hot and pair it with a spicy gravy of your choice. Make sure you try this recipe, rate it and let us know how it turned out to be."   , 
+                user_id: user.id
+
         },
 ])
 res = cat.recipes.create([
@@ -94,7 +111,9 @@ res = cat.recipes.create([
         In a relatively warm environment, the dough rises in about 90 minutes,Punch down the dough to release the air.Roll the dough out to 1/2 inch thickness. Cut the doughnuts using a 3-3.5 inch doughnut cutter. Line 1-2 baking sheets with parchment paper or a silicone baking mat. Place doughnuts (and doughnut holes!) onto the lined baking sheet, then lightly cover and allow to rest as you prepare the oil.
         Using a heavy-duty pot and an oil thermometer, heat the oil to 375°F (191°C). Place a cooling rack over another baking sheet.
         Working with 2-3 doughnuts at a time, cook for 1 minute on each side. Carefully remove from the oil and place onto prepared rack. Repeat with remaining doughnuts. (See my recipe note about making the doughnut holes.)
-        Dip each warm doughnut into the glaze and coat both sides. After about 20 minutes, the glaze will set."
+        Dip each warm doughnut into the glaze and coat both sides. After about 20 minutes, the glaze will set.",
+        user_id: user.id
+
         },
         {
         title: "Toast & Egg",
@@ -104,7 +123,9 @@ res = cat.recipes.create([
         direction: "Mix the chopped onion, with salt and spicies combine with the egg and mix.
         Heat Pan, spread it well, when pan is hot dip bread in egg one side first and place it in the hot pan.
         When done place the egg mixtures in the pan, and cook both sides flipping.
-        when done place the bread slices over it and press the spatula. Ready to serve"
+        when done place the bread slices over it and press the spatula. Ready to serve",
+        user_id: user.id
+
         },
 
         
@@ -119,12 +140,17 @@ res = cat.recipes.create([
                 cup blueberries, ½
                 teaspoon finely chopped or grated orange zest, ½
                 cup low-fat milk, soy milk, almond beverage or rice beverage", 
-                direction: "Bring the water to a boil in a medium-size saucepan. Add the salt, cinnamon, honey and oatmeal. Reduce the heat, and simmer uncovered for five minutes or until most of the water has been absorbed. Add the blueberries, orange zest and milk (or alternate beverage). Bring to a simmer, and simmer five more minutes or until the oatmeal is thick and creamy and the blueberries have begun to pop. Cover and let stand for five minutes, then serve."
+                direction: "Bring the water to a boil in a medium-size saucepan. Add the salt, cinnamon, honey and oatmeal. Reduce the heat, and simmer uncovered for five minutes or until most of the water has been absorbed. Add the blueberries, orange zest and milk (or alternate beverage). Bring to a simmer, and simmer five more minutes or until the oatmeal is thick and creamy and the blueberries have begun to pop. Cover and let stand for five minutes, then serve.",
+                user_id: user.id
+
         }
                 
         
 ]
 )
+
+
+
 # recipes.comments.create(
 #     comment: "Toomato"
 # )
