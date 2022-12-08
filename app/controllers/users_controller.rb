@@ -21,10 +21,10 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:username, :email, :password, :password_confirmation, :bio, :estate, :profile_pic, :followers, :following)
+    params.permit(:username, :phone, :password, :password_confirmation)
   end
 
   def update_params
-    params.permit(:username, :email, :profile_pic, :bio)
+    params.permit(:username)
   end
 end
