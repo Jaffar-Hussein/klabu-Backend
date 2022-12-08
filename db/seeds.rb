@@ -20,6 +20,7 @@ user = User.create!(
 
         username: "Hanan",
         email: "hanan@gmail.com",
+        phone: "0718006434",
         password: "1234",
         password_confirmation: "1234"
 )
