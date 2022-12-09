@@ -1,24 +1,25 @@
-# README
+# Klabu - API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+A ruby on rails backend that servees as a API to the frontend Klabu application hosten here and has a livelink here
 
-* Ruby version
+## Technologies Used
 
-* System dependencies
+- Ruby
+- Rails
 
-* Configuration
 
-* Database creation
+## Setup Instructions and Installation
 
-* Database initialization
+- Clone this repository to a location in your file system. `git clone https://Jaffar-Hussein/klabu-Backend/.git`
+- Open terminal command line then navigate to the root folder of the application. `bundle install`
+- Run `rails db:migrate db:seed` 
+- Run `rails server` to get a live site on port 3000
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Routes
 
-* Deployment instructions
+- Serves authorization and authentification routes for users
+- Serves routes to interact with the recipes and categories models
 
-* ...
+
