@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: %i[ show update destroy ]
+  skip_before_action :authorize, only: [:create, :index,:show]
 
   # GET /comments
   def index

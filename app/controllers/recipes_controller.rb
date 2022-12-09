@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :set_recipe, only: %i[ show update destroy ]
+  skip_before_action :authorize, only: [:create, :index,:show]
 
   # GET /recipes
   def index
@@ -10,7 +10,9 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1
   def show
-    render json: @recipe
+    recipe = Recipe.find_by(id: params[:id])
+
+    render json: recipe
   end
 
   # POST /recipes

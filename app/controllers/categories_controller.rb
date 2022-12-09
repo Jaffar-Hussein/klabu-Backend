@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: %i[ show update destroy ]
+  skip_before_action :authorize, only: [:create, :index,:show]
 
   # GET /categories
   def index
@@ -10,7 +10,9 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1
   def show
-    render json: @category
+    categories = Category.find_by(id: params[:id])
+
+    render json: categories
   end
 
   # POST /categories
