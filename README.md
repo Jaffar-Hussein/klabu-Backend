@@ -1,7 +1,7 @@
 # Klabu - API
 
 
-A ruby on rails backend that servees as a API to the frontend Klabu application hosten here and has a livelink here
+A ruby on rails backend that servees as a API to the frontend Klabu application hosted [here](https://github.com/Jaffar-Hussein/klabu-frontend) and has a livelink [here]()
 
 ## Technologies Used
 
@@ -23,3 +23,5 @@ A ruby on rails backend that servees as a API to the frontend Klabu application 
 - Serves routes to interact with the recipes and categories models
 
 
+## License
+Find the license information [here](https://github.com/Jaffar-Hussein/klabu-Backend/blob/master/licence) 
