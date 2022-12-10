@@ -1,7 +1,7 @@
 # Klabu - API
 
 
-A ruby on rails backend that servees as a API to the frontend Klabu application hosted [here](https://github.com/Jaffar-Hussein/klabu-frontend) and has a livelink [here]()
+A ruby on rails backend that servees as a API to the frontend Klabu application hosted [here](https://github.com/Jaffar-Hussein/klabu-frontend) and has a livelink [here](https://klabu-frontend-nyp6wgd5k-jaffar-hussein.vercel.app)
 
 ## Technologies Used
 
